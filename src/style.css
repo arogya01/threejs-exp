@@ -1,20 +1,59 @@
-*
-{
-    margin: 0;
-    padding: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 html,
-body
-{
-    height: 100vh;
-    font-family: 'Poppins';
+body {
+  height: 100vh;
+  font-family: "Poppins";
+  background-color: #000;
+  color: #e4e4e4;
 }
 
-.webgl
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    outline: none;
+.header {
+  z-index: 3;
+  width: 480px;
+  margin-left: 4rem;
+  font-size: 42px;
+  line-height: 48px;
+  font-family: sans-serif;
+  position: relative;
+}
+
+#paraone {
+  margin-top: 16rem;
+}
+
+#paratwo {
+  margin-top: 2rem;
+}
+
+.header span {
+  display: inline-block;
+  animation: lift 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}
+
+@keyframes lift {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0);
+  }
+}
+
+.webgl {
+  position: absolute;
+
+  top: 0;
+  left: 40%;
+  outline: none;
 }
